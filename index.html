@@ -1,0 +1,184 @@
+<title>zenkio</title>
+<meta name="google-adsense-account" content="ca-pub-8216754751561060">
+<meta name="description" content="Software by zenkio.">
+
+<style>
+  :root {
+    --bg:      #F5F6F4;
+    --surface: #EAECEB;
+    --ink:     #181D1B;
+    --muted:   #64706C;
+    --accent:  #0f766e;
+    --line:    #D5D9D7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg:      #101412;
+      --surface: #1B201E;
+      --ink:     #E4EAE7;
+      --muted:   #8A9994;
+      --accent:  #17a898;
+      --line:    #272E2C;
+    }
+  }
+  :root[data-theme="light"] {
+    --bg:#F5F6F4;--surface:#EAECEB;--ink:#181D1B;--muted:#64706C;--accent:#0f766e;--line:#D5D9D7;
+  }
+  :root[data-theme="dark"] {
+    --bg:#101412;--surface:#1B201E;--ink:#E4EAE7;--muted:#8A9994;--accent:#17a898;--line:#272E2C;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0 24px;
+  }
+
+  main {
+    flex: 1;
+    width: 100%;
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 88px 0 56px;
+  }
+
+  .brand {
+    font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', 'Courier New', monospace;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--accent);
+    margin-bottom: 24px;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+    margin-bottom: 12px;
+  }
+
+  .tagline {
+    font-size: 1rem;
+    color: var(--muted);
+    max-width: 40ch;
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid var(--line);
+    margin: 48px 0 32px;
+  }
+
+  .label {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 8px;
+  }
+
+  .projects {
+    list-style: none;
+    border-top: 1px solid var(--line);
+    margin-top: 16px;
+  }
+
+  .projects li {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .projects a {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 18px 0;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .proj-left {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .proj-name {
+    font-size: 0.975rem;
+    font-weight: 600;
+    color: var(--ink);
+    transition: color 0.12s;
+  }
+
+  .projects a:hover .proj-name {
+    color: var(--accent);
+  }
+
+  .proj-desc {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+
+  .proj-url {
+    font-family: ui-monospace, 'Cascadia Code', monospace;
+    font-size: 0.75rem;
+    color: var(--muted);
+    white-space: nowrap;
+    transition: color 0.12s;
+  }
+
+  .projects a:hover .proj-url {
+    color: var(--accent);
+  }
+
+  footer {
+    width: 100%;
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 0 0 40px;
+    font-size: 0.78rem;
+    color: var(--muted);
+  }
+
+  @media (max-width: 480px) {
+    main { padding-top: 56px; }
+    h1 { font-size: 1.4rem; }
+    .proj-url { display: none; }
+  }
+</style>
+
+<main>
+  <p class="brand">zenkio</p>
+  <h1>Software for people who need it.</h1>
+  <p class="tagline">Small, focused tools built with care. Free to use, no sign-up required.</p>
+
+  <hr>
+
+  <p class="label">Projects</p>
+  <ul class="projects">
+    <li>
+      <a href="https://hoandduck.zenkio.uk" target="_blank" rel="noopener">
+        <div class="proj-left">
+          <div class="proj-name">Ho &amp; Duck</div>
+          <div class="proj-desc">Life in the UK test practice — mock exams, progress tracking, free.</div>
+        </div>
+        <span class="proj-url">hoandduck.zenkio.uk</span>
+      </a>
+    </li>
+  </ul>
+</main>
+
+<footer>© <span id="yr"></span> zenkio</footer>
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
