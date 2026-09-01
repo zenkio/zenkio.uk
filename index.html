@@ -150,6 +150,17 @@
     padding: 0 0 40px;
     font-size: 0.78rem;
     color: var(--muted);
+    display: flex;
+    gap: 16px;
+    align-items: baseline;
+  }
+
+  footer a {
+    color: var(--muted);
+  }
+
+  footer a:hover {
+    color: var(--accent);
   }
 
   @media (max-width: 480px) {
@@ -180,5 +191,8 @@
   </ul>
 </main>
 
-<footer>© <span id="yr"></span> zenkio</footer>
+<footer>
+  <span>© <span id="yr"></span> zenkio</span>
+  <a href="/privacy-policy.html">Privacy Policy</a>
+</footer>
 <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
